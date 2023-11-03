@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin - Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script> -->
+        <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/admin-style.css">
+    </head>
+
+    <body>
+        <!-- ======== Main wrapper for dashboard =========== -->
+
+        <div class="wrapper">
+            <!-- =========== Sidebar for admin dashboard =========== -->
+
+            <div id="sidebar" class="sidebar close">
+                <div class="logo-details clickable">
+                    <!-- <i class='bx bxs-ship'></i> -->
+                    <!-- <span class="logo_name">CallArBoat</span> -->
+                    <i class='bx bx-menu'></i>
+                </div>
+                <ul class="nav-links">
+                    <li class="active">
+                        <a href="#" id="dashboard-link">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="link_name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="accounts-link">
+                            <i class='bx bx-user'></i>
+                            <span class="link_name">Accounts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="subscription-link">
+                            <i class='bx bx-credit-card'></i>
+                            <span class="link_name">Subscription</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="notifiaction-link">
+                            <i class='bx bx-bell'></i>
+                            <span class="link_name">Notification</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">
+                            <i class='bx bx-cog'></i>
+                            <span class="link_name">Setting</span>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <div class="profile-details">
+
+                            <div class="name-job">
+                            <i class='bx bx-log-in'></i>
+                        </div>
+                        <i class='bx bx-log-out'></i> 
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+
+
+            <div class="main">
+                <!-- ========= Main navbar section of dashboard ======= -->
+                <nav class="navbar navbar-expand bg-body-tertiary fixed-top sidebar-collapsed">
+                    <div class="container-fluid">
+                        <div class="sidebar-logo">
+                            <a href="#">
+                                <i class='bx bxs-ship'></i>
+                                CallArBoat</a>
+                        </div>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" data-bs-toggle="dropdown" class="nav-icon">
+                                    <img src="/img/profile.jpg" alt="profile" class="avatar img-fluid ">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a href="#" class="dropdown-item">Profile</a>
+                                    <a href="#" class="dropdown-item">Settings</a>
+                                    <a href="#" class="dropdown-item">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- ========= Main content section of dashboard ======= -->
+
+                <section id="dashboard" class="dashboard">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="page-title">
+                                <h4>Dashboard</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3 box-card">
+                            <div class="row">
+                                <div class="col-4 d-flex flex-column left-card mb-0 pb-0">
+                                    <!-- Mobile User Card -->
+                                    <div class="dash-card align-items-center">
+                                        <div class="dash-card-text">
+                                            <div class="card-txt text-end">
+                                                <p>Total Mobile User</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center text-right">
+                                                <i class="bx bxs-user-circle bx-icon"></i>
+                                                <p id="mobileUserCount">Loading...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Web User Card -->
+                                    <div class=" dash-card align-items-center mt-3">
+                                        <div class="dash-card-text">
+                                            <div class="card-txt text-end">
+                                                <p>Total Web User</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center text-right">
+                                                <i class="bx bxs-user-circle bx-icon"></i>
+                                                <p id="webUserCount">Loading...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Table Column (col-8) -->
+                                <div class="col-8">
+                                    <div class="right-table">
+                                        <div class="row pt-2">
+                                            <div class="sort-drop col-md-12 pb-2">
+                                                <!-- Table header and dropdown -->
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <h5>Subscribers</h5>
+                                                    <div class="dropdown">
+                                                        <a class="btn btn-light btn-sm dropdown-toggle" href="#"
+                                                            role="button" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            Sort By
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#">Action</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Another
+                                                                    action</a>
+                                                            </li>
+                                                            <li><a class="dropdown-item" href="#">Something else
+                                                                    here</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-3-2">
+                                                <div class="sub-table h-100 overflow-auto">
+                                                    <table class="table table-borderless">
+                                                        <thead class="table-light sticky-head">
+                                                            <tr>
+                                                                <th scope="col">Account Name</th>
+                                                                <th scope="col">Subscription Plan</th>
+                                                                <th scope="col">Subscription Date</th>
+                                                                <th scope="col">Renewal</th>
+                                                                <th scope="col">Days Left</th>
+                                                                <th scope="col">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="table-group-divider">
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Mark</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Jacob</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Bask</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Mark</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Jacob</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Bask</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Mark</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Jacob</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Mark</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <th scope="row">Jacob</th>
+                                                                <td>1,500/mon</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>Jun-23-23</td>
+                                                                <td>23 days</td>
+                                                                <td>
+                                                                    <p class="status">Active</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row dash-chart">
+                                <div class="col-8">
+                                    <div class="col-md-12 pb-2">
+                                        <!-- Table header and dropdown -->
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5>Income Chart</h5>
+                                            <div class="dropdown">
+                                                <a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Sort By
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div id="chart-container">
+                                            <canvas id="myChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex flex-column h-100">
+                                        <div class="flex-grow-1">
+                                            <img src="/img/dash-graph-illustration.png" alt="graph-illustration"
+                                                class="img-fluid" style="width: 100%; height: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======= Accounts Section ======= -->
+                <section id="accounts" class="accounts">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="page-title">
+                                <h4>Accounts</h4>
+                            </div>
+                        </div>
+                        <!-- ======= Total Users Cards ====== -->
+                        <div class="col-12">
+                            <div class="row acc-card-body">
+                                <div class="account-cards d-flex justify-content-between align-items-center">
+                                    <div class="col-3 mb-0 flex-item">
+                                        <div>
+                                            <h5 class="acc-card-title">Total Admin Users</h5>
+                                        </div>
+                                        <div class="acc-total-admin d-flex justify-content-between align-items-center">
+                                            <p class="acc-total-text">5</p>
+                                            <i class='bx bx-user'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 mb-0 flex-item">
+                                        <div>
+                                            <h5 class="acc-card-title">Total Mobile Users</h5>
+                                        </div>
+                                        <div class="acc-total-admin d-flex justify-content-between align-items-center">
+                                            <p class="acc-total-text">250</p>
+                                            <i class='bx bx-user'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 mb-0 flex-item">
+                                        <div>
+                                            <h5 class="acc-card-title">Total Company Users</h5>
+                                        </div>
+                                        <div class="acc-total-admin d-flex justify-content-between align-items-center">
+                                            <p class="acc-total-text">10</p>
+                                            <i class='bx bx-user'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ======= Table Users ====== -->
+                        <div class="col-12 mb-3">
+                            <div class="acc-table-users m-5">
+                                <!-- Dropdown and Button -->
+                                <div class="col-12 mb-3 d-flex justify-content-between align-items-center">
+                                    <div class="dropdown py-2 d-flex align-items-center">
+                                        <a class="btn btn-light btn-sm dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Select Users
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn btn-primary px-3 d-flex align-items-center"
+                                        data-bs-toggle="modal" data-bs-target="#account-addUser">Add
+                                        <i class='bx bx-plus'></i>
+                                    </button>
+                                </div>
+                                <!-- Table -->
+                                <div class="col-12 mb-3 table-box">
+                                    <div class="table-container">
+                                        <div class="table-body">
+                                            <table class="table table-borderless table-scroll">
+                                                <thead class="table-light line-header">
+                                                    <tr class="headline">
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Username</th>
+                                                        <th scope="col">Password</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Larry the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Account Add Modal ===== -->
+                <div class="modal fade" id="account-addUser" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-12 text-center">
+                                    <h4>Add User</h4>
+                                </div>
+                                <div class="col-12">
+                                    <form class="m-5">
+                                        <!-- Name input -->
+                                        <div class="form-group mb-4">
+                                            <label class="form-label" for="name2">Name</label>
+                                            <input type="text" id="name2" class="form-control" />
+                                        </div>
+
+                                        <!-- Email input -->
+                                        <div class="form-group mb-4">
+                                            <label class="form-label" for="email2">Email address</label>
+                                            <input type="email" id="email2" class="form-control" />
+                                        </div>
+
+                                        <!-- Password input -->
+                                        <div class="form-group mb-4">
+                                            <label class="form-label" for="password2">Password</label>
+                                            <input type="password" id="password2" class="form-control" />
+                                        </div>
+
+                                        <!-- Submit button -->
+                                        <div class="form-group mb-4">
+                                            <button type="submit" class="btn btn-primary addBtn">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======= Accounts Section End ======= -->
+
+                <!-- ======= Subscription Section ======= -->
+                <section id="subscription" class="subscription">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="page-title">
+                                <h4>Subscription</h4>
+                            </div>
+                        </div>
+
+                        <!-- Add Modal Plan -->
+                        <div class="col-12">
+                            <div class="add-plan">
+                                <button type="button" class="btn btn-primary px-3 d-flex align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#plan-addUser">Add
+                                    <i class='bx bx-plus'></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Table For Plan -->
+                        <div class="col-12 mb-3">
+                            <div class="plan-table-bg">
+                                <div class="col-12 mb-3">
+                                    <div class="sub-title">
+                                        <h4 class="card-title">Subscription Plan</h4>
+                                    </div>
+                                </div>
+                                <div class="plan-table-container">
+                                    <div class="plan-table-body">
+                                        <div class="plan-table-content">
+                                            <table class="table table-borderless table-secondary table-scroll">
+                                                <thead class="table line-header table-secondary">
+                                                    <tr class="headline">
+                                                        <th scope="col">Subscription Plan</th>
+                                                        <th scope="col">Subscription Fee</th>
+                                                        <th scope="col">Account No</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subscriber Table -->
+                        <div class="col-12 mb-3">
+                            <div class="subs-table-bg">
+                                <div class="col-12 mb-3">
+                                    <div class="sub-title">
+                                        <h4 class="card-title">Subscribers</h4>
+                                    </div>
+                                </div>
+                                <div class="subs-table-container">
+                                    <div class="subs-table-body">
+                                        <div class="subs-table-content">
+                                            <table class="table table-borderless table-secondary table-scroll">
+                                                <thead class="table line-header table-secondary">
+                                                    <tr class="headline">
+                                                        <th scope="col">Account Name</th>
+                                                        <th scope="col">Subscription Plan</th>
+                                                        <th scope="col">Subscription Date</th>
+                                                        <th scope="col">Renewal</th>
+                                                        <th scope="col">Days Left</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>
+                                                            <p class="status">Active</p>
+                                                        </td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>
+                                                            <p class="status">Active</p>
+                                                        </td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>
+                                                            <p class="status">Active</p>
+                                                        </td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>
+                                                            <p class="status">Active</p>
+                                                        </td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>@mdo</td>
+                                                        <td>
+                                                            <p class="status">Active</p>
+                                                        </td>
+                                                        <td class="action-btn">
+                                                            <a href="#" class="text-info" title="Edit">
+                                                                <i class='bx bx-edit'></i>
+                                                            </a>
+                                                            <a href="#" class="text-danger" title="Delete">
+                                                                <i class='bx bx-trash'></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== Subscription Add Modal ===== -->
+                <div class="modal fade" id="plan-addUser" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-12 text-center">
+                                    <h4>Add Subscription Plan</h4>
+                                </div>
+                                <div class="col-12">
+                                    <form class="m-5">
+                                        <!-- Name input -->
+                                        <div class="form-group mb-4">
+                                            <label class="form-label" for="name2">Subscription Plan</label>
+                                            <input type="text" id="name2" class="form-control" />
+                                        </div>
+
+                                        <!-- Email input -->
+                                        <div class="form-group mb-4">
+                                            <label class="form-label" for="email2">Subscription Fee</label>
+                                            <input type="email" id="email2" class="form-control" />
+                                        </div>
+
+                                        <!-- Password input -->
+                                        <div class="form-group mb-4">
+                                            <label class="form-label" for="password2">Account No</label>
+                                            <input type="password" id="password2" class="form-control" />
+                                        </div>
+
+                                        <!-- Submit button -->
+                                        <div class="form-group mb-4">
+                                            <button type="submit" class="btn btn-primary addBtn">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal End Here -->
+                <!-- ======= Subscription Section End ======= -->
+
+                <!-- ======= Notification Section ======= -->
+                <section id="notifiaction" class="notifiaction">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="page-title notify-text">
+                                <h4>Notification</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="notif-container">
+                                <div class="col-12 d-flex justify-content-end align-items-center">
+                                    <button type="button" id="composebtn" class="btn btn-primary">
+                                        <i class='bx bx-pencil'></i>
+                                        Compose
+                                    </button>
+                                </div>
+                                <div class="col-mb-12">
+
+                                    <div class="title-container">
+                                        <div class="col-12">
+                                            <h4 class="card-title">Today</h4>
+                                        </div>
+                                        <div class="col-12 notif-card-container">
+                                            <a href="" id="cardIssued" class="card bg-primary mb-2">
+                                                <div class="card-element">
+                                                    <div class="subject-text">
+                                                        <p class=""><b>Shawn Mendez</b> Issue report</p>
+                                                    </div>
+                                                    <div class="date-issued">
+                                                        <p>Jan-20-23 10:30am</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="card bg-primary mb-2">
+                                                <div class="card-element">
+                                                    <div class="subject-text">
+                                                        <p class=""><b>Shawn Mendez</b> Issue report</p>
+                                                    </div>
+                                                    <div class="date-issued">
+                                                        <p>Jan-20-23 10:30am</p>
+                                                    </div>
+                                                </div>
+                                            </a><a href="" class="card bg-primary mb-2">
+                                                <div class="card-element">
+                                                    <div class="subject-text">
+                                                        <p class=""><b>Shawn Mendez</b> Issue report</p>
+                                                    </div>
+                                                    <div class="date-issued">
+                                                        <p>Jan-20-23 10:30am</p>
+                                                    </div>
+                                                </div>
+                                            </a><a href="" class="card bg-primary mb-2">
+                                                <div class="card-element">
+                                                    <div class="subject-text">
+                                                        <p class=""><b>Shawn Mendez</b> Issue report</p>
+                                                    </div>
+                                                    <div class="date-issued">
+                                                        <p>Jan-20-23 10:30am</p>
+                                                    </div>
+                                                </div>
+                                            </a><a href="" class="card bg-primary mb-2">
+                                                <div class="card-element">
+                                                    <div class="subject-text">
+                                                        <p class=""><b>Shawn Mendez</b> Issue report</p>
+                                                    </div>
+                                                    <div class="date-issued">
+                                                        <p>Jan-20-23 10:30am</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ==== Issued Content ==== -->
+                            <div class="notif-content-container">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a id="backArrowContent"><i class='bx bx-arrow-back'></i></a>
+                                            <a><i class='bx bx-trash-alt'></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Subject and Name -->
+                                    <div class="col-12 mb-3">
+                                        <div class="subject-details">
+                                            <p><b>Date:</b> Jan-20-23 10:30am</p>
+                                            <p><b>Reprted By:</b> Shawn Mendez</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <h5>Description:</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="content-text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                                                        quisquam iusto libero nostrum quas veniam eius, dolor dolorum,
+                                                        quis esse, at ex unde ad? Quia ex eum eius illum eaque.
+
+                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
+                                                        eius dicta architecto! Id aut ratione harum illo velit voluptate
+                                                        earum vel dolorem, culpa maxime, mollitia praesentium quos sunt
+                                                        accusamus at!
+
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Doloremque labore exercitationem aliquam. Omnis quam minima
+                                                        debitis aperiam ratione excepturi iure harum deleniti, vero
+                                                        dolor accusamus ab ea eveniet quos? Omnis!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ==== Compose MSG ==== -->
+                            <div class="notif-msg-container">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a id="backArrowMsg"><i class='bx bx-arrow-back'></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Subject and Name -->
+                                    <div class="col-12 mb-3">
+                                        <div class="subject-details">
+                                            <p><b>Date:</b> Jan-20-23 10:30am</p>
+                                            <p><b>Reprted By:</b> Shawn Mendez</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <h5>Description:</h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="content-text">
+                                                    <textarea class="message-text" placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notification Modal -->
+
+                <!-- Modal End Here -->
+                <!-- ======= Notification Section End ======= -->
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+        <script src="/vendor/aos/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src="/javascript/Chart.js"></script>
+        <script src="/javascript/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#cardIssued").click(function (event) {
+                    event.preventDefault(); // Prevent the default behavior of the link
+
+                    // Hide .notif-container
+                    $(".notif-container").hide();
+
+                    // Show .notif-content-container
+                    $(".notif-content-container").show();
+                });
+
+                $("#backArrowContent").click(function (event) {
+                    // Hide .notif-content-container
+                    $(".notif-content-container").hide();
+
+                    // Show .notif-container
+                    $(".notif-container").show();
+                });
+
+                $("#backArrowMsg").click(function (event) {
+                    // Hide .notif-content-container
+                    $(".notif-msg-container").hide();
+
+                    // Show .notif-container
+                    $(".notif-container").show();
+                });
+
+                $("#composebtn").click(function () {
+                    // Hide .notif-container
+                    $(".notif-container").hide();
+
+                    // Show .notif-msg-container
+                    $(".notif-msg-container").show();
+                });
+            });
+
+        </script>
+    </body>
+
+</html>

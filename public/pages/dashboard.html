@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- Boxiocns CDN Link -->
+        <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> -->
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Dashboard</title>
+    </head>
+
+    <body>
+        <div id="sidebar" class="sidebar close">
+            <div class="logo-details">
+                <!-- <i class='bx bxs-ship'></i> -->
+                <!-- <span class="logo_name">CallArBoat</span> -->
+                <i class='bx bx-menu'></i>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="#">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="link_name">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-user'></i>
+                        <span class="link_name">Accounts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-credit-card'></i>
+                        <span class="link_name">Subscription</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-bell'></i>
+                        <span class="link_name">Notification</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-cog'></i>
+                        <span class="link_name">Setting</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Setting</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="profile-details">
+
+                        <!-- <div class="name-job">
+                            <i class='bx bx-log-in'></i>
+                        </div>
+                        <i class='bx bx-log-out'></i> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Header or top nav -->
+        <!-- <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+                <i class='bx bxs-ship'></i>
+                <span class="text">CallArBoat</span>
+            </div>
+        </section> -->
+        <section class="home-section">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dash">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <div class="navbar-brand mt-2 mt-lg-0" href="#">
+                            <i class='bx bxs-ship'></i>
+                            <span class="text-logo">CallArBoat</span>
+                        </div>
+                        <!-- Navbar brand -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- Avatar -->
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                            alt="Black and White Portrait of a Man" loading="lazy" />
+                        <div class="dropdown">
+                            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                                id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
+                                aria-expanded="false">
+                                <!-- <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
+                                    height="25" alt="Black and White Portrait of a Man" loading="lazy" /> -->
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li>
+                                    <a class="dropdown-item" href="#">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Right elements -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+
+            <section class="dashboard-page" id="dashboard">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <div class="page-title">
+                                <h4>Dashboard</h4>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="dash-table">
+                                <div class="dash-body">
+                                    <!-- Total Users Card -->
+                                    <div class="row">
+                                        <div class="col-4 d-flex flex-column left-card mb-0 pb-0">
+                                            <!-- Mobile User Card -->
+                                            <div class="dash-card align-items-center">
+                                                <div class="dash-card-text">
+                                                    <div class="card-txt text-end">
+                                                        <p>Total Mobile User</p>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center text-right">
+                                                        <i class="bx bxs-user-circle bx-icon"></i>
+                                                        <p>90</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Web User Card -->
+                                            <div class="dash-card align-items-center mt-3">
+                                                <div class="dash-card-text">
+                                                    <div class="card-txt text-end">
+                                                        <p>Total Web User</p>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex justify-content-between align-items-center text-right">
+                                                        <i class="bx bxs-user-circle bx-icon"></i>
+                                                        <p>90</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Table Column (col-8) -->
+                                        <div class="col-8 right-table">
+                                            <div class="row pt-2">
+                                                <div class="col-md-12 pb-2">
+                                                    <!-- Table header and dropdown -->
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <h5>Subscribers</h5>
+                                                        <div class="dropdown">
+                                                            <a class="btn btn-light btn-sm dropdown-toggle" href="#"
+                                                                role="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">
+                                                                Sort By
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                <li><a class="dropdown-item" href="#">Another action</a>
+                                                                </li>
+                                                                <li><a class="dropdown-item" href="#">Something else
+                                                                        here</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 pb-2">
+                                                    <div class="sub-table h-100 overflow-auto">
+                                                        <table class="table table-borderless">
+                                                            <thead class="table-light sticky-head">
+                                                                <tr>
+                                                                    <th scope="col">Account Name</th>
+                                                                    <th scope="col">Subscription Plan</th>
+                                                                    <th scope="col">Subscription Date</th>
+                                                                    <th scope="col">Renewal</th>
+                                                                    <th scope="col">Days Left</th>
+                                                                    <th scope="col">Status</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class="table-group-divider">
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Mark</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Jacob</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Bask</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Mark</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Jacob</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Bask</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Mark</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Jacob</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Mark</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="align-middle">
+                                                                    <th scope="row">Jacob</th>
+                                                                    <td>1,500/mon</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>Jun-23-23</td>
+                                                                    <td>23 days</td>
+                                                                    <td>
+                                                                        <p class="status">Active</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <h1>1st</h1> -->
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="dash-graph">
+                                <h1>2nd</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia
+                                    deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <script>
+            // Get references to all elements with the bx-icon class
+            const icons = document.querySelectorAll(".bx-icon");
+
+            // Function to toggle the padding-left of icons with the bx-icon class
+            function togglePaddingLeft() {
+                icons.forEach((icon) => {
+                    if (icon.style.paddingLeft === "10px") {
+                        icon.style.paddingLeft = "0"; // Reset the padding
+                    } else {
+                        icon.style.paddingLeft = "10px"; // Adjust the padding
+                    }
+                });
+            }
+
+            // Call the togglePaddingLeft function to initialize the padding
+            togglePaddingLeft();
+
+            // Add an event listener to the icons (or any other trigger) to call togglePaddingLeft
+            icons.forEach((icon) => {
+                icon.addEventListener("click", () => {
+                    togglePaddingLeft();
+                });
+            });
+
+        </script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </body>
+
+</html>
